@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: white;
+  padding: 0 10px;
+  background-color: rgb(144, 32, 167);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav input {
+  display: none;
+}
+nav label img {
+  width: 30px;
+}
+
+.collapse {
+  flex-basis: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
+input:checked ~ .collapse {
+  max-height: unset;
+}
+
+@media screen and (min-width: 400px) {
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  header nav ul li {
+    padding: 5px 10px;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav .collapse {
+    flex-basis: unset;
+    max-height: unset;
+  }
+}/*# sourceMappingURL=main-style.css.map */

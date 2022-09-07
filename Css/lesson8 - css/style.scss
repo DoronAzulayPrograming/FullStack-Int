@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: red;
+    min-height: 300px;
+    transition:background-color 2s;
+
+    &:hover{
+        background-color: blue;
+    }
+    & nav{
+        background-color: green;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    animation-name: colorTransition,moveRightLeft;
+    animation-duration: 2s;
+}
+
+@keyframes moveRightLeft{
+    0%{left: 0;}
+    50%{left: calc(100% - 250px);}
+    100%{left: 0;}
+}
+
+@keyframes colorTransition{
+    0%{background-color: blue;}
+    25%{background-color: gold;}
+    80%{background-color: black;}
+    100%{background-color: blue;}
+}

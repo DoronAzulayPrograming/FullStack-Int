@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(230, 232, 235);
+}
+
+header nav {
+  padding: 0 20px;
+  border-bottom: 1px solid border-color;
+  background-color: white;
+}
+header nav h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav-list, header nav .social-list {
+  overflow: hidden;
+  max-height: 0;
+  list-style: none;
+}
+header nav .btn-menu {
+  cursor: pointer;
+  width: 25px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+header nav input {
+  display: none;
+}
+header nav input:checked ~ ul {
+  max-height: unset;
+}
+header nav .nav-list li {
+  text-align: center;
+  padding: 12px 10px;
+}
+header nav .nav-list li a {
+  all: unset;
+  cursor: pointer;
+}
+header nav .nav-list li:hover {
+  background-color: rgb(230, 232, 235);
+}
+header nav .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+header nav .social-list li:nth-child(3) img {
+  width: 30px;
+}
+header nav .social-list img {
+  width: 20px;
+}
+
+.products {
+  margin: 2em;
+}
+.products .wrapper .product {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgb(211, 213, 214);
+  text-align: center;
+}
+.products .wrapper .product h2 {
+  margin: 0.4em 0;
+}
+.products .wrapper .product img {
+  width: 100%;
+}
+
+@media screen and (min-width: 45em) {
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav input, header nav .btn-menu {
+    display: none;
+  }
+  header nav input:checked ~ ul {
+    max-height: unset;
+  }
+  header nav .nav-list, header nav .social-list {
+    list-style: none;
+    max-height: unset;
+  }
+  header nav .nav-list {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  header nav .nav-list li a {
+    font-weight: 600;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .products .wrapper {
+    padding: 5px;
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 65em) {
+  .products .wrapper {
+    padding: 5px;
+    flex-basis: calc(33% - 10px);
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson - 5 Css Box</title>
+
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        h1{
+            text-align: center;
+        }
+        span{
+            padding: 15px;
+            border-radius: 20px 0;
+            background-color: yellow;
+        }
+
+        .div , .div1{
+            padding: 5px;
+            display: inline-block;
+            width: 30%;
+        }
+
+        .div{
+            border: 1px solid red;
+        }
+        .div1{
+            border: 1px solid blue;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        .wraper{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1><span>Places</span></h1>
+
+    <div class="wraper">
+        <div class="div">
+            <h3>place name</h3>
+            <p>place description</p>
+        </div>
+
+        <div class="div">
+            <h3>place name</h3>
+            <p>place description</p>
+        </div>
+
+        <div class="div1">
+            <h3>place name</h3>
+            <p>place description</p>
+        </div>
+    </div>
+    
+</body>
+</html>

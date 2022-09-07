@@ -1,0 +1,26 @@
+.gall {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.gall .col img{
+    width: 100%;
+}
+
+@media screen and (min-width:650px) {
+    .gall .col{
+        flex-basis: 33.333%;
+    }
+    .gall .col div{
+        padding: 5px;
+    }
+}
+@media screen and (min-width:900px) {
+    .gall .col{
+        flex-basis: 25%;
+    }
+    .gall .col div{
+        padding: 5px;
+    }
+}

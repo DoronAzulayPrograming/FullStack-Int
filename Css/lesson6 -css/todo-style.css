@@ -1,0 +1,23 @@
+div{
+    padding: 20px;
+}
+
+div ul{
+    list-style: lower-greek;
+    list-style-position: inside;
+    border:1px solid lightgrey;
+}
+
+div ul h2{
+    background-color: azure;
+    padding: 10px;
+}
+div ul li{
+    text-transform: capitalize;
+    background-color: aquamarine;
+}
+div ul li:hover{
+    background-color: lightslategray;
+}
+
+

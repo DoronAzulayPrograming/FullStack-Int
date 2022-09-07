@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$body-bg:rgb(230, 232, 235);
+$bg:white;
+$border-color:rgb(211, 213, 214);
+body{
+    background-color: $body-bg;
+}
+
+header{
+    nav{
+        padding: 0 20px;
+        border-bottom:1px solid border-color;
+        background-color: $bg;
+
+        h1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list, .social-list{
+            overflow: hidden;
+            max-height: 0;
+            list-style: none;
+        }
+        .btn-menu{
+            cursor: pointer;
+            width: 25px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        input{
+            display: none;
+        }
+        input:checked ~ ul{
+            max-height: unset;
+        }
+        .nav-list{
+            li{
+                text-align: center;
+                padding: 12px 10px;
+
+                a{
+                    all:unset;
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    background-color: $body-bg;
+                }
+            }
+        }
+        .social-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:5px;
+
+            li:nth-child(3)  img{
+                width: 30px;
+            }
+
+            img{
+                width: 20px;
+            }
+        }
+    }
+}
+
+.products{
+    margin: 2em;
+    .wrapper{
+        .product{
+            display: flex;
+            flex-direction: column;
+            background-color: $bg;
+            border: 1px solid $border-color;
+            text-align: center;
+            h2{
+                margin: .4em 0;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:45em) {
+    header{
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input,.btn-menu{
+                display: none;
+            }
+            input:checked ~ ul{
+                max-height: unset;
+            }
+
+            .nav-list, .social-list{
+                list-style: none;
+                max-height: unset;
+            }
+
+            .nav-list{
+                display: flex;
+                flex-direction: row-reverse;
+
+                li{
+                    a{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .wrapper{
+            padding: 5px;
+            flex-basis: calc(50% - 10px);
+        }
+    }
+}
+
+@media screen and (min-width:65em) {
+    .products{
+        .wrapper{
+            padding: 5px;
+            flex-basis: calc(33% - 10px);
+        }
+    }
+}
+

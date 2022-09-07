@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: lightslategray;
+}
+
+nav{
+ padding-bottom: 2px;
+ border-bottom: 1px dotted red;   
+}
+
+nav h2{
+    display: inline-block;
+}
+
+nav ul{
+    padding: 4px 8px;
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    padding: 2px 4px;
+    color:whitesmoke;
+    border-radius: 20px;
+    background-color: salmon;
+    text-decoration: none;
+    transition: all .5s;
+}
+nav ul li a:hover{
+    background-color: white;
+    color:salmon;
+}

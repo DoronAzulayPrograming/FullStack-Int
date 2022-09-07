@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header{
+    background-color: lightgreen;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav h2 {
+    padding: 10px 5px;
+}
+
+nav label img{
+    max-width: 50px;
+}
+
+nav input{
+    display: none;
+}
+
+
+nav input:checked ~ div{
+    max-height: 500px;
+    transition: max-height .7s ease-out;
+}
+
+
+nav .collapse{
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .7s ease-out;
+}
+
+
+@media screen and (min-width:650px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row-reverse;
+        list-style: none;
+    }
+    
+    nav ul li{
+        padding: 5px 10px;
+    }
+    
+    nav .collapse{
+        flex-basis: auto;
+    }
+   
+    nav label{
+        display: none;
+    }
+
+   nav .collapse{
+        max-height: unset;
+    }
+
+}

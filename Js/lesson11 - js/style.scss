@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$body-bg:rgb(230, 232, 235);
+$bg:white;
+$border-color:rgb(211, 213, 214);
+
+body{
+    background-color: $body-bg;
+}
+
+table{
+    background-color: $bg;
+    td,th{
+        padding: 5px 10px;
+        border:1px solid $border-color;
+    }
+
+    img{
+        width: 100px;
+    }
+}
+
+form{
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+
+
+
+
