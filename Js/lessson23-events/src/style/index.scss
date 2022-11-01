@@ -1,0 +1,10 @@
+button{
+    padding: 10px 20px;
+    background-color: rgb(204, 22, 250);
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover{
+        background-color: salmon;
+    }
+}
